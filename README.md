@@ -3,6 +3,8 @@
 This repository contains all project files of Auto-pilot Robot Project. 
 This code was developed to run in a BeagleBone Blue board and to use Robotics Cape API.
 
+Attention: this project is FULLY Open-Source, under Beer License. In another words, use it as you want to!
+
 # How to build the project
 
 Once you cloned this repository into your BeagleBone Blue eMMC / SD Card memory, the first thing to do is give execution privillege to compile and run script:
