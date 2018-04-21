@@ -6,6 +6,6 @@ This code was developed to run in a BeagleBone Blue board and to use Robotics Ca
 Special thanks to:
 
 
-* (https://www.embarcados.com.br/author/felipe-projetosterra-com-br/ "Felipe Neves")
-* (https://www.embarcados.com.br/author/ederandrade1gmail-com/ "Eder Tadeu")
-* (https://www.embarcados.com.br/author/engenheiro-puhlmanngmail-com/ "Henrique Puhlmann")
+* [Felipe Neves](https://www.embarcados.com.br/author/felipe-projetosterra-com-br/ "Felipe Neves")
+* [Eder Tadeu](https://www.embarcados.com.br/author/ederandrade1gmail-com/ "Eder Tadeu")
+* [Henrique Puhlmann](https://www.embarcados.com.br/author/engenheiro-puhlmanngmail-com/ "Henrique Puhlmann")
