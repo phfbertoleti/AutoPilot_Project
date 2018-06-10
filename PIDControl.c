@@ -59,7 +59,7 @@ float calc_PID(float process_variable, float time_step)
     float current_error;
     float p_factor;
     float i_factor;
-    float d_factor;
+    float f_factor;
     float pid_final_result;
 
     /* Current error calculation */
@@ -71,7 +71,7 @@ float calc_PID(float process_variable, float time_step)
     i_factor = PIDController.integral_acum + (KI_CONSTANT * current_error * time_step);
     PIDController.integral_acum = i_factor;
 
-    d_factor = KD_CONSTANT * ( (PIDController.last_error - current_error) / time_step );
+    f_factor = KD_CONSTANT * ( (PIDController.last_error - current_error) / time_step );
     PIDController.last_error = current_error;
 
     /* PID value calculation */
