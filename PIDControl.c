@@ -12,8 +12,8 @@
 #include "PIDControl.h"
 
 /* Define section */ 
-#define KP_CONSTANT     (float)1.0
-#define KI_CONSTANT     (float)0.5
+#define KP_CONSTANT     (float)2.5
+#define KI_CONSTANT     (float)1.0
 #define KD_CONSTANT     (float)0.0
 #define PID_MAX_LIMIT   (float)1.0  /* 100% */
 #define PID_MIN_LIMIT   (float)0.0  /* 0%   */
