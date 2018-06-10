@@ -25,7 +25,8 @@
 
 #define SPEED_UNIT   (int)KM_PER_HOUR
 
-#define TIME_STEP_PID_CONTROL  (float)1  //s
+#define TIME_STEP_PID_CONTROL  (float)0.001  //s
+#define TIME_STEP_SHOW_MSG     (float)1      //s
 
 /* Uncomment the line below to enable debug messages */
 #define ENABLE_DEBUG_MESSAGES_MAIN
@@ -42,9 +43,10 @@ void publish(MQTTClient client, char* topic, char* payload);
 int on_message(void *context, char *topicName, int topicLen, MQTTClient_message *message);
 void run_auto_pilot(float instant_speed);
 
-//variaveis globais
+/* Global variables */
 #ifdef ENABLE_PID_DATA_LOGGING_CSV
-  unsigned long int pid_points_counter=0;
+  static unsigned long int pid_points_counter=0;
+  static float target_duty_cycle;
 #endif
 
 /* Function implementation section */ 
@@ -88,8 +90,7 @@ int on_message(void *context, char *topicName, int topicLen, MQTTClient_message 
 */
 void run_auto_pilot(float instant_speed)
 {
-   float nomalized_speed;
-   float target_duty_cycle;
+   float nomalized_speed;   
    char cmd_line[100];
 
    nomalized_speed = instant_speed / SPEED_FULL_DUTY_CYCLE;
@@ -178,7 +179,8 @@ int main(int argc, char *argv[])
             run_auto_pilot(instant_speed);
         }
 
-        rc_usleep(TIME_STEP_PID_CONTROL*1000000);
+        //rc_usleep(TIME_STEP_PID_CONTROL);
+        rc_usleep(1000);
 	}
 
     /* Disable motor controllers */
