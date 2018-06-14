@@ -1,2 +1,3 @@
-# AutoPilot
-Projeto de piloto automático para um robô de 4 rodas. Este projeto utiliza a placa BeagleBone Blue.
+# Auto Pilot Robot Project
+
+This is the repository of a robot project. This robot is built using a BeagleBone Blue board and uses its IMU accelerometer to estimate speed. Plus, robot speed is controled by PID control.
